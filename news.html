@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set up character encoding and ensure the page looks good on all devices -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Article - TechThreads</title>
+
+    <!-- Link to the custom CSS file for styling -->
+    <!-- Start of my own code -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- End of my own code -->
+
+    <!-- Import Google Fonts for consistent typography -->
+    <!-- Source: https://fonts.google.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Logo that links back to the homepage -->
+        <!-- Start of my own code -->
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                <img src="techthreads.png" alt="TechThreads Logo"> <!-- Display the website logo -->
+                <h1>TechThreads</h1> <!-- Main title of the site -->
+            </div>
+        </a>
+        <!-- Link to the sign-in page for users -->
+        <a href="signin.html" class="sign-in">Sign In</a>
+        <!-- End of my own code -->
+    </header>
+    
+    <nav>
+        <!-- Navigation links to different sections of the website -->
+        <!-- Start of my own code -->
+        <a href="index.html">Home</a> <!-- Go back to the homepage -->
+        <a href="startups.html">Startups</a> <!-- Explore startup-related content -->
+        <a href="ai.html">AI</a> <!-- Dive into artificial intelligence topics -->
+        <a href="security.html">Security</a> <!-- Learn about security trends -->
+        <a href="apps.html">Apps</a> <!-- Discover app-related news -->
+        <a href="venture.html">Venture</a> <!-- Read about venture capital -->
+        <a href="newsletter.html">Newsletter</a> <!-- Subscribe to the newsletter -->
+        <!-- End of my own code -->
+    </nav>
+    
+    <div class="news-article">
+        <!-- Title of the article being displayed -->
+        <!-- Start of my own code -->
+        <h2 id="article-title">Loading Article Title...</h2>
+        <!-- Image associated with the article -->
+        <img id="article-image" class="news-image" src="placeholder.jpg" alt="Article Image">
+        <!-- Content or summary of the article -->
+        <p id="article-content"></p>
+        <!-- Publication date of the article -->
+        <p><small>Published on: <span id="article-date"></span></small></p>
+        <!-- Link to read the full article on its original source -->
+        <a id="full-article-link" href="#" target="_blank">Read Full Article</a>
+        <!-- End of my own code -->
+    </div>
+    
+    <footer>
+        <div class="footer-container">
+            <!-- Top Row: Website logo and social media links -->
+            <!-- Start of my own code -->
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="techthreads.png" alt="TechThreads Logo"> <!-- Footer logo -->
+                </div>
+                <div class="footer-socials">
+                    <!-- Links to social media profiles -->
+                    <a href="https://x.com/techthreads1" target="_blank"><img src="x_logo.png" alt="X"></a> <!-- X (formerly Twitter) -->
+                    <a href="https://instagram.com/techthreads5" target="_blank"><img src="instalogo.jpg" alt="Instagram"></a> <!-- Instagram -->
+                    <a href="https://threads.net/techthreads5" target="_blank"><img src="threads.png" alt="Threads"></a> <!-- Threads -->
+                    <a href="https://www.youtube.com/@TechThreads-m5c" target="_blank"><img src="youtube.png" alt="YouTube"></a> <!-- YouTube -->
+                </div>
+            </div>
+    
+            <!-- Middle Row: Useful links like privacy policy and contact info -->
+            <div class="footer-links">
+                <div class="footer-column">
+                    <a href="#">Staff</a> <!-- Meet the team behind TechThreads -->
+                    <a href="#">Contact</a> <!-- Get in touch with us -->
+                    <a href="#">Careers</a> <!-- Explore job opportunities -->
+                    <a href="#">Advertise</a> <!-- Learn about advertising -->
+                </div>
+                <div class="footer-column">
+                    <a href="#">Privacy</a> <!-- Understand our privacy practices -->
+                    <a href="#">Terms</a> <!-- Review our terms of service -->
+                    <a href="#">Cookies</a> <!-- Learn how we use cookies -->
+                    <a href="#">Code of Conduct</a> <!-- Our community guidelines -->
+                </div>
+            </div>
+    
+            <!-- Bottom Row: Copyright notice -->
+            <div class="footer-copyright">
+                <p>&copy; 2025 TechThreads. All rights reserved.</p> <!-- Legal copyright statement -->
+            </div>
+            <!-- End of my own code -->
+        </div>
+    </footer>    
+
+    <!-- JavaScript to dynamically load article details -->
+    <!-- Start of my own code -->
+    <script>
+        // This script runs when the page loads to display the selected article
+        const article = JSON.parse(localStorage.getItem("selectedArticle")); // Retrieve the article data from localStorage
+        if (article) {
+            // Update the article title, or show a default message if it's missing
+            document.getElementById("article-title").innerText = article.title || "No Title Available";
+            // Display the article content, with a fallback message if it's unavailable
+            document.getElementById("article-content").innerHTML = article.content || "Content unavailable.";
+            // Format and display the publication date of the article
+            document.getElementById("article-date").innerText = new Date(article.date).toLocaleDateString();
+            // Set the link to the full article, or disable it if no URL is provided
+            document.getElementById("full-article-link").href = article.link || "#";
+            // Set the article image, or use a placeholder if no image is available
+            document.getElementById("article-image").src = article.image || "placeholder.jpg";
+        } else {
+            // If no article is found, display a friendly error message
+            document.querySelector(".news-article").innerHTML = "<h2>Article not found!</h2>";
+        }
+    </script>
+    <!-- End of my own code -->
+</body>
+</html>

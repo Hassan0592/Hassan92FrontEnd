@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set character encoding and viewport for responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechThreads</title>
+
+    <!-- Link to Bootstrap CSS for styling -->
+    <!-- Source: https://getbootstrap.com/ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- My own CSS file -->
+    <!-- Start of my own code -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- End of my own code -->
+</head>
+<body>
+    <!-- Header section with logo and sign-in link -->
+    <!-- Start of my own code -->
+    <header>
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                <img src="techthreads.png" alt="TechThreads Logo"> <!-- Display the logo image -->
+                <h1>TechThreads</h1> <!-- Main title of the website -->
+            </div>
+        </a>
+        <a href="signin.html" class="sign-in">Sign In</a> <!-- Link to sign-in page -->
+    </header>
+    <!-- End of my own code -->
+
+    <!-- Navigation bar with links to different sections -->
+    <!-- Start of my own code -->
+    <nav>
+        <a href="index.html">Home</a> <!-- Link to homepage -->
+        <a href="startups.html">Startups</a> <!-- Link to startups section -->
+        <a href="ai.html">AI</a> <!-- Link to AI section -->
+        <a href="security.html">Security</a> <!-- Link to security section -->
+        <a href="apps.html">Apps</a> <!-- Link to apps section -->
+        <a href="venture.html">Venture</a> <!-- Link to venture section -->
+        <a href="newsletter.html">Newsletter</a> <!-- Link to newsletter page -->
+    </nav>
+    <!-- End of my own code -->
+
+    <main>
+        <!-- News Carousel for displaying latest news -->
+        <!-- This carousel uses Bootstrap components -->
+        <!-- Source: https://getbootstrap.com/docs/5.3/components/carousel/ -->
+        <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators"></div> <!-- Indicators for carousel navigation -->
+            <div class="carousel-inner"></div> <!-- Container for carousel slides -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span> <!-- Previous button icon -->
+                <span class="visually-hidden">Previous</span> <!-- Accessibility text -->
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span> <!-- Next button icon -->
+                <span class="visually-hidden">Next</span> <!-- Accessibility text -->
+            </button>
+        </div>
+
+        <!-- RSS Feed section to display latest entries -->
+        <!-- Start of my own code -->
+        <div class="rss-feed">
+            <h2>Latest in TechThreads</h2> <!-- Title for RSS feed -->
+            <div id="rss-entries"></div> <!-- Placeholder for dynamic RSS entries -->
+        </div>
+        <!-- End of my own code -->
+    </main>
+
+    <!-- Footer section with logo, social links, and legal info -->
+    <!-- Start of my own code -->
+    <footer>
+        <div class="footer-container">
+            <!-- Top Row: Logo + Social Media Links -->
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="techthreads.png" alt="TechThreads Logo"> <!-- Footer logo -->
+                </div>
+                <div class="footer-socials">
+                    <a href="https://x.com/techthreads1" target="_blank"><img src="x_logo.png" alt="X"></a> <!-- X (formerly Twitter) -->
+                    <a href="https://instagram.com/techthreads5" target="_blank"><img src="instalogo.jpg" alt="Instagram"></a> <!-- Instagram -->
+                    <a href="https://threads.net/techthreads5" target="_blank"><img src="threads.png" alt="Threads"></a> <!-- Threads -->
+                    <a href="https://www.youtube.com/@TechThreads-m5c" target="_blank"><img src="youtube.png" alt="YouTube"></a> <!-- YouTube -->
+                </div>
+            </div>
+            <!-- Middle Row: Legal and Site Links -->
+            <div class="footer-links">
+                <div class="footer-column">
+                    <a href="#">Staff</a> <!-- Link to staff page -->
+                    <a href="#">Contact</a> <!-- Link to contact page -->
+                    <a href="#">Careers</a> <!-- Link to careers page -->
+                    <a href="#">Advertise</a> <!-- Link to advertising info -->
+                </div>
+                <div class="footer-column">
+                    <a href="#">Privacy</a> <!-- Link to privacy policy -->
+                    <a href="#">Terms</a> <!-- Link to terms of service -->
+                    <a href="#">Cookies</a> <!-- Link to cookie policy -->
+                    <a href="#">Code of Conduct</a> <!-- Link to code of conduct -->
+                </div>
+            </div>
+            <!-- Bottom Row: Copyright Notice -->
+            <div class="footer-copyright">
+                <p>&copy; 2025 TechThreads. All rights reserved.</p> <!-- Copyright statement -->
+            </div>
+        </div>
+    </footer>
+    <!-- End of my own code -->
+
+    <!-- Include Bootstrap JS for interactive components -->
+    <!-- Source: https://getbootstrap.com/ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- My own JavaScript file -->
+    <!-- Start of my own code -->
+    <script src="script.js"></script>
+    <!-- End of my own code -->
+</body>
+</html>

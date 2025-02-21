@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set up character encoding and ensure the page looks good on all devices -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter - TechThreads</title>
+    <!-- Add Bootstrap CSS for styling and layout -->
+     <!-- Source: https://getbootstrap.com/ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to custom CSS file for additional styling -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Import Google Fonts for consistent typography -->
+     <!-- Source: https://fonts.google.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header section with logo and sign-in link -->
+     <!-- Start of my own code -->
+    <header>
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                <img src="techthreads.png" alt="TechThreads Logo"> <!-- Display the website logo -->
+                <h1>TechThreads</h1> <!-- Main title of the site -->
+            </div>
+        </a>
+        <a href="signin.html" class="sign-in">Sign In</a> <!-- Link to sign-in page -->
+    </header>
+    
+    <!-- Navigation bar with links to different sections -->
+    <nav>
+        <a href="index.html">Home</a> <!-- Go back to the homepage -->
+        <a href="startups.html">Startups</a> <!-- Explore startup-related content -->
+        <a href="ai.html">AI</a> <!-- Dive into artificial intelligence topics -->
+        <a href="security.html">Security</a> <!-- Learn about security trends -->
+        <a href="apps.html">Apps</a> <!-- Discover app-related news -->
+        <a href="venture.html">Venture</a> <!-- Read about venture capital -->
+        <a href="newsletter.html">Newsletter</a> <!-- Subscribe to the newsletter -->
+    </nav>
+    
+    <!-- Subscription container with pricing plans -->
+    <div class="subscription-container">
+        <h2>Stay Ahead with TechThreads</h2> <!-- Encouraging headline for subscriptions -->
+        <p>Get exclusive insights on startups, AI, security, and tech trends delivered straight to your inbox.</p> <!-- Description of the newsletter benefits -->
+        
+        <div class="subscription-options">
+            <!-- Popular annual digital plan -->
+            <div class="plan popular">
+                <span class="tag">Most Popular!</span> <!-- Highlight this as the most popular option -->
+                <h3>Annual Digital</h3> <!-- Plan name -->
+                <p class="price"><s>£2.50</s> <strong>£1/month</strong></p> <!-- Discounted price -->
+                <p>Billed as £12 at the time of order. Renews automatically for £30/year. Cancel anytime.</p> <!-- Payment details -->
+                <button class="subscribe-button" data-bs-toggle="modal" data-bs-target="#subscriptionModal">Get Digital Access</button> <!-- Button to open subscription modal -->
+            </div>
+            <!-- Annual print + digital plan -->
+            <div class="plan">
+                <h3>Annual Print + Digital</h3> <!-- Plan name -->
+                <p class="price"><s>£30</s> <strong>£19 for 1 year</strong></p> <!-- Discounted price -->
+                <p>The print edition, delivered to your door. Billed as £19 at the time of order. Renews automatically for £30/year. Cancel anytime.</p> <!-- Payment details -->
+                <button class="subscribe-button" data-bs-toggle="modal" data-bs-target="#subscriptionModal">Get Print & Digital</button> <!-- Button to open subscription modal -->
+            </div>
+        </div>
+        <!-- Supported payment methods -->
+        <div class="payment-methods">
+            <img src="card.png" alt="Card Payment"> <!-- Credit/debit card -->
+            <img src="applepay.png" alt="Apple Pay"> <!-- Apple Pay -->
+            <img src="googlepay.png" alt="Google Pay"> <!-- Google Pay -->
+            <img src="paypal-icon.png" alt="PayPal"> <!-- PayPal -->
+        </div>
+        <p class="cancel-policy">Cancel or pause anytime.</p> <!-- Reassurance about flexibility -->
+    </div>
+    <!-- end of my own code -->
+    <!-- Bootstrap Modal for Subscription -->
+     <!-- Source: https://getbootstrap.com/ -->
+    <div class="modal fade" id="subscriptionModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Subscribe to TechThreads</h5> <!-- Title of the modal -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button> <!-- Close button -->
+                </div>
+                <div class="modal-body">
+                    <!-- Subscription form -->
+                    <form id="subscriptionForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address*</label> <!-- Email input field -->
+                            <input type="email" class="form-control" id="email" required placeholder="your.email@example.com">
+                            <div class="invalid-feedback">
+                                Please enter a valid email address. <!-- Error message for invalid email -->
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name (optional)</label> <!-- Optional name field -->
+                            <input type="text" class="form-control" id="fullName" placeholder="Hassan Omer">
+                        </div>
+                        <div class="mb-3">
+                            <p>Selected Plan: <strong id="selectedPlan"></strong></p> <!-- Display the selected plan -->
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="terms" required> <!-- Terms checkbox -->
+                            <label class="form-check-label" for="terms">
+                                I agree to the <a href="/terms" target="_blank">Terms of Service</a> <!-- Link to terms -->
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before subscribing. <!-- Error message for unchecked terms -->
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Subscribe</button> <!-- Submit button -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- start of my own code -->
+    <!-- Footer section with logo, social links, and legal info -->
+    <footer>
+        <div class="footer-container">
+            <!-- Top Row: Logo + Social Media Links -->
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="techthreads.png" alt="TechThreads Logo"> <!-- Footer logo -->
+                </div>
+                <div class="footer-socials">
+                    <!-- Links to social media profiles -->
+                    <a href="https://x.com/techthreads1" target="_blank"><img src="x_logo.png" alt="X"></a> <!-- X (formerly Twitter) -->
+                    <a href="https://instagram.com/techthreads5" target="_blank"><img src="instalogo.jpg" alt="Instagram"></a> <!-- Instagram -->
+                    <a href="https://threads.net/techthreads5" target="_blank"><img src="threads.png" alt="Threads"></a> <!-- Threads -->
+                    <a href="https://www.youtube.com/@TechThreads-m5c" target="_blank"><img src="youtube.png" alt="YouTube"></a> <!-- YouTube -->
+                </div>
+            </div>
+    
+            <!-- Middle Row: Useful Links -->
+            <div class="footer-links">
+                <div class="footer-column">
+                    <a href="#">Staff</a> <!-- Meet the team behind TechThreads -->
+                    <a href="#">Contact</a> <!-- Get in touch with us -->
+                    <a href="#">Careers</a> <!-- Explore job opportunities -->
+                    <a href="#">Advertise</a> <!-- Learn about advertising -->
+                </div>
+                <div class="footer-column">
+                    <a href="#">Privacy</a> <!-- Understand our privacy practices -->
+                    <a href="#">Terms</a> <!-- Review our terms of service -->
+                    <a href="#">Cookies</a> <!-- Learn how we use cookies -->
+                    <a href="#">Code of Conduct</a> <!-- Our community guidelines -->
+                </div>
+            </div>
+    
+            <!-- Bottom Row: Copyright Notice -->
+            <div class="footer-copyright">
+                <p>&copy; 2025 TechThreads. All rights reserved.</p> <!-- Legal copyright statement -->
+            </div>
+        </div>
+    </footer>
+    <!-- end of my own code -->
+     <!-- Source: https://getbootstrap.com/ -->
+    <!-- Add Bootstrap JS for interactive components -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Store subscriptions in localStorage under a specific key
+        const STORAGE_KEY = 'techthreads_subscriptions';
+        
+        // Handle clicks on subscription buttons to update the selected plan in the modal
+        document.querySelectorAll('.subscribe-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const plan = button.closest('.plan').querySelector('h3').textContent; // Get the plan name
+                document.getElementById('selectedPlan').textContent = plan; // Update the modal with the selected plan
+            });
+        });
+        
+        // Form validation and submission logic
+        (() => {
+            'use strict'
+            const form = document.getElementById('subscriptionForm'); // Get the subscription form
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) { // Check if the form is valid
+                    event.preventDefault(); // Prevent submission if invalid
+                    event.stopPropagation();
+                } else {
+                    event.preventDefault(); // Prevent default form submission
+                    // Collect form data
+                    const email = document.getElementById('email').value;
+                    const name = document.getElementById('fullName').value || 'Anonymous'; // Use "Anonymous" if no name is provided
+                    const plan = document.getElementById('selectedPlan').textContent;
+                    // Save the subscription data to localStorage
+                    saveSubscription({
+                        email,
+                        name,
+                        plan,
+                        date: new Date().toISOString() // Record the subscription date
+                    });
+                    alert('Thank you for subscribing!'); // Show a success message
+                    bootstrap.Modal.getInstance(document.getElementById('subscriptionModal')).hide(); // Close the modal
+                    form.reset(); // Reset the form
+                    form.classList.remove('was-validated'); // Clear validation styles
+                }
+                form.classList.add('was-validated'); // Add validation styles
+            }, false);
+        })();
+        
+        // Function to save subscription data to localStorage
+        function saveSubscription(data) {
+            const subscriptions = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); // Retrieve existing subscriptions
+            subscriptions.push(data); // Add the new subscription
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(subscriptions)); // Save updated subscriptions back to localStorage
+        }
+    </script>
+</body>
+</html>
